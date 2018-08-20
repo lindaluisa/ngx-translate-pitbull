@@ -1,3 +1,14 @@
 <div>
   <h1>NGX-TRANSLATE LIBRARY</h1>
 </div>
+
+
+<div>
+  <h2>{{ 'title' | translate }}</h2>
+  <label>
+    {{ 'pitbull.catchphrase.one' | translate }}
+<!--     <select #langSelect (change)="translateService.use(langSelect.value)">
+      <option *ngFor="let lang of translateService.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+    </select> -->
+  </label>
+</div>

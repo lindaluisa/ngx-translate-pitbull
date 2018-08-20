@@ -14,6 +14,7 @@ export class AppComponent {
   constructor( translateService: TranslateService ) {
     // fallbacklanguage
     translateService.setDefaultLang('en');
+    translateService.addLangs(['en', 'de', 'es', 'pt']);
 
     // lang if no other found
     translateService.use('en');
@@ -22,6 +23,9 @@ export class AppComponent {
             .subscribe((res: string) => {
                 console.log(res);
             });
+
+      let browserLang = translateService.getBrowserLang();
+      translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
   }
 
 }
