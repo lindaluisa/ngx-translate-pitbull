@@ -11,7 +11,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   title = 'app';
 
-  constructor( translateService: TranslateService ) {
+  constructor(public translateService: TranslateService ) {
     // fallbacklanguage
     translateService.setDefaultLang('en');
     translateService.addLangs(['en', 'de', 'es', 'pt']);
@@ -26,6 +26,17 @@ export class AppComponent {
 
       let browserLang = translateService.getBrowserLang();
       translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
-  }
 
-}
+    }
+    
+    switchLang(language: string) {
+      this.translateService.use(language);
+    }
+  }
+  
+
+/*         "": "",
+            "": "",
+            "": "",
+            "": "",
+            "": "" */

@@ -1,78 +1,83 @@
-<div class="col-md-6 .col-md-offset-3">
-  <h1>NGX-TRANSLATE LIBRARY</h1>
-  <div>
-    <h2>{{ 'title' | translate }}</h2>
-    <label>
-      {{ 'pitbull.catchphrase.one' | translate }}
-  <!--     <select #langSelect (change)="translateService.use(langSelect.value)">
-        <option *ngFor="let lang of translateService.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
-      </select> -->
-    </label>
-  </div>
+
+<div class="container">
+
+    <div class="col-md-6 .col-md-offset-3">
+        <h1>NGX-TRANSLATE LIBRARY</h1>
+        <h2>{{ 'page.title' | translate }}</h2>
+    <div>
+        <label>
+        {{ 'catchphrase.one' | translate }}
+    <!--       <select #langSelect (change)="translateService.use(langSelect.value)">
+            <option *ngFor="let lang of translateService.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+        </select> -->
+        </label>
+    </div>
+    </div>
 </div>
 
-<br>
-<br>
-<div class="col-md-6 .col-md-offset-3">
-  <p class="bg-warning">
-    <button type="button" class="btn btn-default btn-xs">Ha ha</button>
-  </p>
-  <p class="bg-warning">It's Mr. 305 checkin' in for the remix</p>
-  <p class="bg-warning">You know thats 75 Street Brazil?</p>
-  <p class="bg-warning">Well this year gon' be called 
-      <button type="button" class="btn btn-default btn-xs">Calle Ocho</button>
-  </p>
-  <p class="bg-warning">
-      <button type="button" class="btn btn-default btn-xs">Ha ha</button>
-      <button type="button" class="btn btn-default btn-xs">Ha ha</button>
-  </p>
+  <div class="container">
+    <br>
+    <br>
+    <div class="center-block">
+    <p class="bg-warning">
+        <button type="button" (click)="switchLang('es')" class="btn btn-default btn-xs"> {{ 'catchphrase.laughter' | translate }} </button>
+    </p>
+    <p class="bg-warning"><span><button type="button" (click)="switchLang('es')" class="btn btn-default btn-xs"> {{ 'catchphrase.miami' | translate }} </button></span> checkin' in for the remix</p>
+    <p class="bg-warning">You know thats 75 Street Brazil?</p>
+    <p class="bg-warning">Well this year gon' be called 
+        <button type="button" class="btn btn-default btn-xs">Calle Ocho</button>
+    </p>
+    <p class="bg-warning">
+        <button type="button" class="btn btn-default btn-xs"> {{ 'catchphrase.laughter' | translate }} </button>
+        <button type="button" class="btn btn-default btn-xs"> {{ 'catchphrase.laughter' | translate }} </button>
+    </p>
 
-  <p class="bg-warning">Que ola cata</p>
-  <p class="bg-warning">Que ola omega</p>
-  <p class="bg-warning">And this how we goin' do it</p>
-  <br>
-  <p class="bg-warning">
-      <button type="button" class="btn btn-default btn-xs">Dale</button>
-  </p>
-  <p class="bg-warning">
-      <button type="button" class="btn btn-default btn-xs">One</button>
-      <button type="button" class="btn btn-default btn-xs">Two</button>
-      <button type="button" class="btn btn-default btn-xs">Three</button>
-      <button type="button" class="btn btn-default btn-xs">Four</button>
-  </p>
-  <p class="bg-warning">
-      <button type="button" class="btn btn-default btn-xs">Uno</button>
-      <button type="button" class="btn btn-default btn-xs">Dos</button>
-      <button type="button" class="btn btn-default btn-xs">Tres</button>
-      <button type="button" class="btn btn-default btn-xs">Cuatro</button>
-  </p>
+    <p class="bg-warning">Que ola cata</p>
+    <p class="bg-warning">Que ola omega</p>
+    <p class="bg-warning">And this how we goin' do it</p>
+    <br>
+    <p class="bg-warning">
+        <button type="button" class="btn btn-default btn-xs">Dale</button>
+    </p>
+    <p class="bg-warning">
+        <button type="button" class="btn btn-default btn-xs"> {{ 'catchphrase.one' | translate }} </button>
+        <button type="button" class="btn btn-default btn-xs"> {{ 'catchphrase.two' | translate }} </button>
+        <button type="button" class="btn btn-default btn-xs"> {{ 'catchphrase.three' | translate }} </button>
+        <button type="button" class="btn btn-default btn-xs"> {{ 'catchphrase.four' | translate }} </button>
+    </p>
+    <p class="bg-warning">
+        <button type="button" class="btn btn-default btn-xs"> {{ 'catchphrase.one' | translate }} </button>
+        <button type="button" class="btn btn-default btn-xs"> {{ 'catchphrase.two' | translate }} </button>
+        <button type="button" class="btn btn-default btn-xs"> {{ 'catchphrase.three' | translate }} </button>
+        <button type="button" class="btn btn-default btn-xs"> {{ 'catchphrase.four' | translate }} </button>
+    </p>
 
-  <p class="bg-warning">
-      <button type="button" class="btn btn-default btn-xs">I know you want me</button>
-  </p>
-  <p class="bg-warning">
-      <button type="button" class="btn btn-default btn-xs">You know I want cha</button>
-  <p>(3x)</p>
-  <br>
-  <p class="bg-warning">
-      <button type="button" class="btn btn-default btn-xs">One</button>
-      <button type="button" class="btn btn-default btn-xs">Two</button>
-      <button type="button" class="btn btn-default btn-xs">Three</button>
-      <button type="button" class="btn btn-default btn-xs">Four</button>
-  </p>
-  <p class="bg-warning">
-      <button type="button" class="btn btn-default btn-xs">Uno</button>
-      <button type="button" class="btn btn-default btn-xs">Dos</button>
-      <button type="button" class="btn btn-default btn-xs">Tres</button>
-      <button type="button" class="btn btn-default btn-xs">Cuatro</button>
-  </p>
+    <p class="bg-warning">
+        <button type="button" class="btn btn-default btn-xs">I know you want me</button>
+    </p>
+    <p class="bg-warning">
+        <button type="button" class="btn btn-default btn-xs">You know I want cha</button>
+    <p>(3x)</p>
+    <br>
+    <p class="bg-warning">
+        <button type="button" class="btn btn-default btn-xs">One</button>
+        <button type="button" class="btn btn-default btn-xs">Two</button>
+        <button type="button" class="btn btn-default btn-xs">Three</button>
+        <button type="button" class="btn btn-default btn-xs">Four</button>
+    </p>
+    <p class="bg-warning">
+        <button type="button" class="btn btn-default btn-xs">Uno</button>
+        <button type="button" class="btn btn-default btn-xs">Dos</button>
+        <button type="button" class="btn btn-default btn-xs">Tres</button>
+        <button type="button" class="btn btn-default btn-xs">Cuatro</button>
+    </p>
 
-  <p class="bg-warning">Rumba Si</p>
-  <p class="bg-warning">Ella quiere su rumba (¿cómo?)</p>
-  <p class="bg-warning">Rumba Si</p>
-  <p class="bg-warning">Ella quiere su rumba (¿cómo?)</p>
+    <p class="bg-warning">Rumba Si</p>
+    <p class="bg-warning">Ella quiere su rumba (¿cómo?)</p>
+    <p class="bg-warning">Rumba Si</p>
+    <p class="bg-warning">Ella quiere su rumba (¿cómo?)</p>
 
-  <div>
-  </div>
+    <div>
+    </div>
+    </div>
 </div>
-

@@ -1,5 +1,15 @@
 {
-    "title": "Pitbull Song Generator",
-    "pitbull.catchphrase.one": "Uno, dos, tres, cuatro",
-    "pitbull.catchphrase.two": "Dale"
-}
+    "page": {
+        "title": "Pitbull Song Generator"
+    },
+    "catchphrase": {
+        "one": "One",
+        "two": "Two",
+        "three": "Three",
+        "four": "Four",
+        "dale": "Leggo",
+        "laughter": "Ha ha",
+        "miami": "It's Mr. 305"
+    }
+    
+    }
